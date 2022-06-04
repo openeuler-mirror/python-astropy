@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-astropy
 Version:	4.0.1.post1
-Release:	1
+Release:	2
 Summary:	Community-developed python astronomy tools
 License:	BSD 3-Clause License
 URL:		http://astropy.org
@@ -17,6 +17,7 @@ Provides:	python-astropy
 BuildRequires:	python3-devel
 BuildRequires:	python3-setuptools
 BuildRequires:	python3-cffi
+BuildRequires:	python3-numpy
 BuildRequires:	gcc
 BuildRequires:	gdb
 %description -n python3-astropy
@@ -69,5 +70,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Tue May 31 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 4.0.1.post1-2
+- add necessary buildrequires
+
 * Thu Jul 16 2020 Python_Bot <Python_Bot@openeuler.org>
 - Package Spec generated
